@@ -82,14 +82,14 @@ public class LinkedListDeque<T> {
             }
             node = node.next;
         }
-        return (T)node.val;
+        return (T) node.val;
     }
 
     public T getRecursive(int index) {
         if (index < 0) {
             return null;
         }
-        return (T)helpGetRecursive(index, dummyHead.next);
+        return (T) helpGetRecursive(index, dummyHead.next);
     }
 
     private T helpGetRecursive(int index, Node head) {
@@ -97,9 +97,9 @@ public class LinkedListDeque<T> {
             return null;
         }
         if (index == 0) {
-            return (T)head.val;
+            return (T) head.val;
         }
-        return (T)helpGetRecursive(index - 1, head.next);
+        return (T) helpGetRecursive(index - 1, head.next);
     }
 
 }
